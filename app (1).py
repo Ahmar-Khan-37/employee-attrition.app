@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
 # In[1]:
 
 
@@ -17,7 +20,7 @@ import streamlit as st
 # In[2]:
 
 
-data=pd.read_csv(r"F:\Internship\BiStartX\Datasets\HR Employee Attrition Datasets\HR Employee data.csv")
+data=pd.read_csv("HR Employee data.csv")
 
 
 # In[3]:
@@ -186,6 +189,9 @@ def user_input_features():
 
 input_df = user_input_features()
 
+# Predict Button
+input_df = user_input_features()
+
 input_df_full = pd.DataFrame(columns=X.columns)
 input_df_full.loc[0] = 0  # initialize with zeros
 input_df_full.update(input_df)
@@ -199,9 +205,8 @@ if st.button("Predict Attrition"):
         st.warning("Prediction: The employee is likely to LEAVE.")
 
 
+
 # In[ ]:
-
-
 
 
 
